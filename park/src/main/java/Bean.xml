@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.xworkz.park.Game" id="gameId">
+		<constructor-arg name="name" value="cricket" />
+		<constructor-arg name="noOfPlayers" value="2" />
+		<constructor-arg name="ageLimit" value="5" />
+		<constructor-arg name="type" value="outdoor" />
+	</bean>
+
+	<bean class="com.xworkz.park.Tree" id="treeId">
+		<property name="name" value="palm" />
+		<property name="type" value="aaa" />
+		<property name="width" value="10.0" />
+		<property name="heigth" value="20.0" />
+		<property name="noOfBranches" value="5" />
+		<property name="age" value="80" />
+	</bean>
+	<bean class="com.xworkz.park.Park">
+		<property name="name" value="park-A" />
+		<property name="location" value="bangalore" />
+		<property name="noOfGates" value="5" />
+		<property name="game" ref="gameId" />
+		<property name="tree" ref="treeId" />
+	</bean>
+
+</beans>
