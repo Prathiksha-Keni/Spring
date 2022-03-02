@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.xworkz.mountain.Mountain"
+		id="mountainConstructors7">
+		<constructor-arg name="name" value="aaa"></constructor-arg>
+		<constructor-arg name="height" value="50.5"></constructor-arg>
+		<constructor-arg name="location" value="bbb"></constructor-arg>
+		<constructor-arg name="landform" value="ccc"></constructor-arg>
+		<constructor-arg name="type" value="ddd"></constructor-arg>
+		<constructor-arg name="areaOccupied" value="80.0"></constructor-arg>
+		<constructor-arg name="formOfMountain" value="eee"></constructor-arg>
+	</bean>
+	<bean class="com.xworkz.mountain.Mountain"
+		id="mountainConstructors3">
+		<constructor-arg name="name" value="aaa"></constructor-arg>
+		<constructor-arg name="height" value="50.5"></constructor-arg>
+		<constructor-arg name="location" value="bbb"></constructor-arg>
+	</bean>
+	<bean class="com.xworkz.mountain.Mountain" id="mountainSetters4">
+		<property name="name" value="aaa"></property>
+		<property name="location" value="bbb"></property>
+		<property name="type" value="ddd"></property>
+		<property name="formOfMountain" value="eee"></property>
+	</bean>
+	<bean class="com.xworkz.mountain.Mountain" id="mountainSetters3">
+		<property name="name" value="aaa"></property>
+		<property name="height" value="50.5"></property>
+		<property name="location" value="bbb"></property>
+	</bean>
+</beans>
