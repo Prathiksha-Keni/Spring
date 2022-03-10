@@ -1,5 +1,10 @@
 package com.xworkz.park;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Park {
 
 	private String name;
@@ -8,7 +13,7 @@ public class Park {
 	private Game game;
 	private Tree tree;
 
-	public Park(String name, String location, int noOfGates, Game game, Tree tree) {
+	public Park(@Value("park-1")String name,@Value("bang") String location,@Value("10") int noOfGates,@Autowired Game game, @Autowired Tree tree) {
 		System.out.println("Park Bean created");
 		this.name = name;
 		this.location = location;
@@ -17,10 +22,10 @@ public class Park {
 		this.tree = tree;
 	}
 
-	public Park() {
-		System.out.println("Park Bean created");
-
-	}
+//	public Park() {
+//		System.out.println("Park Bean created");
+//
+//	}
 
 	public String getName() {
 		return name;

@@ -1,5 +1,9 @@
 package com.xworkz.park;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Tree {
 	private String name;
 	private String type;
@@ -8,7 +12,7 @@ public class Tree {
 	private int noOfBranches;
 	private int age;
 
-	public Tree(String name, String type, double width, double heigth, int noOfBranches, int age) {
+	public Tree(@Value("Tree-1")String name, @Value("long")String type, @Value("20.5")double width, @Value("25.5")double heigth, @Value("5")int noOfBranches, @Value("75")int age) {
 		System.out.println("Tree Bean created");
 		this.name = name;
 		this.type = type;
@@ -18,9 +22,9 @@ public class Tree {
 		this.age = age;
 	}
 
-	public Tree() {
-		System.out.println("Tree Bean created");
-	}
+//	public Tree() {
+//		System.out.println("Tree Bean created");
+//	}
 
 	public String getName() {
 		return name;

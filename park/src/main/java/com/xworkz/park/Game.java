@@ -1,16 +1,20 @@
 package com.xworkz.park;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Game {
 	private String name;
 	private int noOfPlayers;
 	private int ageLimit;
 	private String type;
 
-	public Game() {
-		System.out.println("Game Bean created");
-	}
+//	public Game() {
+//		System.out.println("Game Bean created");
+//	}
 
-	public Game(String name, int noOfPlayers, int ageLimit, String type) {
+	public Game(@Value("Game-1")String name,@Value("12") int noOfPlayers,@Value("21") int ageLimit,@Value("out") String type) {
 		System.out.println("Game Bean created");
 		this.name = name;
 		this.noOfPlayers = noOfPlayers;
