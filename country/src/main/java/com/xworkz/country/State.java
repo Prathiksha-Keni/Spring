@@ -6,7 +6,7 @@ public class State {
 	private int pincode;
 
 	public State(String name, int pincode) {
-		super();
+		System.out.println("State bean created");
 		this.name = name;
 		this.pincode = pincode;
 	}

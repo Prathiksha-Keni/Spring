@@ -6,7 +6,7 @@ public class Currency {
 	private double value;
 
 	public Currency(String name, double value) {
-		super();
+		System.out.println("Currency bean created");
 		this.name = name;
 		this.value = value;
 	}
